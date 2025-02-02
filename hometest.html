@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BenJGadd - Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="min-h-screen flex flex-col bg-gray-900 text-gray-100">
+    <div id="navbar-container"></div>
+    <script src="components/navbar.js"></script>
+
+    <main class="mt-[60px] mx-auto px-4 space-y-8 w-11/12 max-w-7xl flex-grow">
+        <section class="grid lg:grid-cols-2 gap-8">
+            <div class="flex justify-center mt-8 md:mt-0">
+                <div class="w-64 h-64 rounded-full overflow-hidden border-4 border-[#00f7ff] shadow-lg shadow-[#00f7ff]/20">
+                    <img src="images/profile.jpg" alt="Profile" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="text-center lg:text-left">
+                <h1 class="text-4xl sm:text-5xl font-bold mb-2">Ben Gadd</h1>
+                <h2 class="text-[#00f7ff] text-xl sm:text-2xl mb-6">Personal Website</h2>
+                
+                <article>
+                    <h3 class="text-[#00f7ff] text-xl mb-4">Experience</h3>
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div>
+                            <h4 class="text-gray-400 mb-2">Education</h4>
+                            <p>Computer Science Student<br>Weber State University</p>
+                        </div>
+                        <div>
+                            <h4 class="text-gray-400 mb-2">Certifications</h4>
+                            <div class="space-y-2">
+                                <p>Google IT Support Professional<br>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="grid lg:grid-cols-2 gap-8">
+            <div class="space-y-8">
+                <article>
+                    <h3 class="text-[#00f7ff] text-xl mb-4">Skills</h3>
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div class="bg-gray-800 p-4 rounded">
+                            <h4 class="text-[#00f7ff] mb-2">Languages</h4>
+                            <p class="text-gray-400">Python, JavaScript, Java</p>
+                        </div>
+                        <div class="bg-gray-800 p-4 rounded">
+                            <h4 class="text-[#00f7ff] mb-2">Frameworks</h4>
+                            <p class="text-gray-400">React, Node.js, Django</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article>
+                    <h3 class="text-[#00f7ff] text-xl mb-4">Featured Projects</h3>
+                    <div class="space-y-4">
+                        <div class="bg-gray-800 p-4 rounded">
+                            <h4 class="text-white mb-2">Coming Soon</h4>
+                            <p class="text-gray-400">Stay tuned for exciting projects!</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <article>
+                <h3 class="text-[#00f7ff] text-xl mb-4">Contact</h3>
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <div class="bg-gray-800 p-4 rounded">
+                        <p class="text-gray-300">Email<br>
+                        <span class="text-gray-400">contact@example.com</span></p>
+                        <p class="text-gray-300 mt-4">Phone<br>
+                        <span class="text-gray-400">+1 (234) 567-8901</span></p>
+                    </div>
+                    <div class="space-y-4">
+                        <a href="https://github.com/BenJGadd" class="flex items-center hover:text-[#00f7ff] transition-colors">
+                            <div class="w-8 h-8 bg-[#00f7ff] rounded-full flex items-center justify-center mr-3">
+                                <i class="fab fa-github text-white"></i>
+                            </div>
+                            <span class="text-[#00f7ff]">GitHub</span>
+                            <span class="ml-auto text-gray-400">/BenJGadd</span>
+                        </a>
+                        <a href="https://linkedin.com/in/benjgadd" class="flex items-center hover:text-[#00f7ff] transition-colors">
+                            <div class="w-8 h-8 bg-[#00f7ff] rounded-full flex items-center justify-center mr-3">
+                                <i class="fab fa-linkedin-in text-white"></i>
+                            </div>
+                            <span class="text-[#00f7ff]">LinkedIn</span>
+                            <span class="ml-auto text-gray-400">/in/benjgadd</span>
+                        </a>
+                        <a href="https://twitter.com/benjgadd" class="flex items-center hover:text-[#00f7ff] transition-colors">
+                            <div class="w-8 h-8 bg-[#00f7ff] rounded-full flex items-center justify-center mr-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-white">
+                                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.657 16.657l-1.414 1.414L12 13.414l-4.243 4.243-1.414-1.414L10.586 12 6.343 7.757l1.414-1.414L12 10.586l4.243-4.243 1.414 1.414L13.414 12l4.243 4.243z"/>
+                                </svg>
+                            </div>
+                            <span class="text-[#00f7ff]">X</span>
+                            <span class="ml-auto text-gray-400">@benjgadd</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="bg-[#00f7ff] mt-8 py-2 text-gray-900">
+        <div class="max-w-7xl mx-auto py-2 flex flex-col sm:flex-row justify-between text-center sm:text-left">
+            <span>© 2025 BenGadd</span>
+            <span>Test Index</span>
+        </div>
+    </footer>
+
+</body>
+</html>
