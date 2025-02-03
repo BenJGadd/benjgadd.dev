@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BenJGadd - Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="images/icon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="darkreader" content="disable">
+    <style>
+        * {
+            font-family: 'Open Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col text-gray-100 font-[Open_Sans]">
+    <nav class="fixed md:static w-full top-0 z-[100] min-h-[60px] px-4 bg-gray-900 flex items-center shadow-lg shadow-gray-900/50">
+        <input type="checkbox" id="nav-toggle" class="hidden peer">
+        
+        <label for="nav-toggle" class="fixed inset-0 bg-black/70 hidden peer-checked:block z-10 top-[60px] md:bg-transparent"></label>
+        
+        <label for="nav-toggle" class="md:hidden absolute left-4 top-1/2 -translate-y-1/2 z-20 cursor-pointer text-gray-400">
+            <i class="fas fa-bars fa-fw text-xl"></i>
+        </label>
+    
+        <div class="md:order-first md:static absolute right-4">
+            <img src="images/icon.svg" alt="Profile Icon" class="[filter:invert(100%)]" width="40" height="40">
+        </div>
+    
+        <div class="title flex items-center gap-2 md:static md:ml-4 absolute left-1/2 -translate-x-1/2 md:-translate-x-0">
+            <a href="/" class="font-medium hover:text-white">BenJGadd</a>
+        </div>
+    
+        <div class="links ml-auto gap-8 hidden md:flex peer-checked:flex fixed md:static inset-x-0 top-[60px] bg-gray-900 md:border-0 border-gray-800 p-4 md:p-0 flex-col md:flex-row z-20">
+            <a href="/" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2 pl-4 md:pl-0">
+                <i class="fas fa-home fa-fw w-4"></i>Home
+            </a>
+            <a href="/about" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2 pl-4 md:pl-0">
+                <i class="fas fa-user fa-fw w-4"></i>About
+            </a>
+            <a href="/projects" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2 pl-4 md:pl-0">
+                <i class="fas fa-code fa-fw w-4"></i>Projects
+            </a>
+            <a href="/resume" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2 pl-4 md:pl-0">
+                <i class="fas fa-file fa-fw w-4"></i>Resume
+            </a>
+            <a href="/contact" class="bg-[#00f7ff] hover:bg-[#00ffff] text-gray-900 font-medium px-4 py-2 rounded-full transition-colors border-2 border-transparent hover:border-[#00f7ff] flex items-center gap-2">
+                <i class="fas fa-envelope fa-fw w-4"></i>Contact
+            </a>
+        </div>
+    </nav>
+    
+    <main class="mt-[60px] mx-auto px-4 space-y-8 w-11/12 max-w-7xl flex-grow z-[99]">
+        <section class="grid lg:grid-cols-2 gap-8">
+            <div class="flex justify-center mt-8 md:mt-0">
+                <div class="w-64 h-64 rounded-full overflow-hidden border-4 border-[#00f7ff] shadow-lg shadow-[#00f7ff]/20">
+                    <img src="images/profile.jpg" alt="Profile" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="lg:text-left text-center">
+                <h1 class="text-4xl sm:text-5xl font-bold mb-2">Ben Gadd</h1>
+                
+                <article>
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-[#00f7ff] text-xl">About Me</h3>
+                        <button class="px-6 py-2 bg-transparent text-[#00f7ff] rounded hover:bg-[#00f7ff] hover:text-gray-900 transition-colors border-2 border-[#00f7ff]">
+                            Learn More
+                        </button>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-gray-400">My name is Ben Gadd. I am a software developer and a student at Weber State University. I am currently pursuing a degree in Computer Science. This website is a collection of my projects and experiences.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="grid lg:grid-cols-2 gap-8">
+            <div class="space-y-8">
+                <article>
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-[#00f7ff] text-xl">Featured Projects</h3>
+                        <button class="px-6 py-2 bg-[#00f7ff] text-gray-900 rounded hover:bg-[#00e6e6] transition-colors">
+                            View All Projects
+                        </button>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-gray-800 rounded flex flex-col sm:flex-row items-start sm:items-center min-h-[195px] shadow-lg shadow-gray-900/50">
+                            <div class="w-full sm:w-1/2 h-full p-6 order-1 sm:order-2">
+                                <img src="images/project1.jpg" alt="Project Image" class="w-full h-48 sm:h-full object-cover rounded">
+                            </div>
+                            <div class="flex-grow p-6 pt-4 sm:w-1/2 order-2 sm:order-1 text-left">
+                                <h4 class="text-white mb-2">Project 1</h4>
+                                <p class="text-gray-400">Project 1 description goes here.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-800 rounded flex flex-col sm:flex-row items-start sm:items-center min-h-[195px] shadow-lg shadow-gray-900/50">
+                            <div class="w-full sm:w-1/2 h-full p-6 order-1 sm:order-2">
+                                <img src="images/project2.jpg" alt="Project 2 Image" class="w-full h-48 sm:h-full object-cover rounded">
+                            </div>
+                            <div class="flex-grow p-6 pt-4 sm:w-1/2 order-2 sm:order-1 text-left">
+                                <h4 class="text-white mb-2">Project 2</h4>
+                                <p class="text-gray-400">Project 2 description goes here.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="space-y-8">
+                <article>
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-[#00f7ff] text-xl">Skills</h3>
+                        <button class="px-6 py-2 bg-[#00f7ff] text-gray-900 rounded hover:bg-[#00e6e6] transition-colors">
+                            View Resume
+                        </button>
+                    </div>
+                    <div class="grid sm:grid-cols-3 gap-4">
+                        <div class="bg-gray-800 p-4 rounded shadow-lg shadow-gray-900/50">
+                            <h3 class="text-[#00f7ff] text-xl mb-4">Education</h3>
+                            <p class="text-gray-400">Weber State University<br>Computer Science Student</p>
+                        </div>
+                        <div class="bg-gray-800 p-4 rounded shadow-lg shadow-gray-900/50">
+                            <h3 class="text-[#00f7ff] text-xl mb-4">Certifications</h3>
+                            <p class="text-gray-400">Google IT Support Professional</p>
+                        </div>
+                        <div class="bg-gray-800 p-4 rounded shadow-lg shadow-gray-900/50">
+
+                            <h4 class="text-[#00f7ff] mb-2">Languages</h4>
+                            <p class="text-gray-400">Python, JavaScript, Java</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article>
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-[#00f7ff] text-xl">Contact</h3>
+                        <button class="px-6 py-2 bg-[#00f7ff] text-gray-900 rounded hover:bg-[#00e6e6] transition-colors">
+                            Contact
+                        </button>
+                    </div>
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div class="bg-gray-800 p-4 rounded shadow-lg shadow-gray-900/50">
+                            <p class="text-gray-300">Email<br>
+                            <span class="text-gray-400">ben@benjgadd.dev</span></p>
+                            <p class="text-gray-300 mt-4">Phone<br>
+                            <span class="text-gray-400">
+                                <img src="images/mdn.svg" alt="Phone" class="h-3 inline-block [filter:invert(65%)]">
+                            </span></p>
+                        </div>
+                        <div class="space-y-4">
+                            <a href="https://github.com/BenJGadd" class="flex items-center hover:text-[#00f7ff] transition-colors">
+                                <div class="w-8 h-8 bg-[#00f7ff] rounded-full flex items-center justify-center mr-3">
+                                    <i class="fab fa-github text-gray-900"></i>
+                                </div>
+                                <span class="text-[#00f7ff]">GitHub</span>
+                                <span class="ml-auto text-gray-400">/BenJGadd</span>
+                            </a>
+                            <a href="https://linkedin.com/in/benjgadd" class="flex items-center hover:text-[#00f7ff] transition-colors">
+                                <div class="w-8 h-8 bg-[#00f7ff] rounded-full flex items-center justify-center mr-3">
+                                    <i class="fab fa-linkedin-in text-gray-900"></i>
+                                </div>
+                                <span class="text-[#00f7ff]">LinkedIn</span>
+                                <span class="ml-auto text-gray-400">/in/benjgadd</span>
+                            </a>
+                            <a href="https://twitter.com/benjgadd" class="flex items-center hover:text-[#00f7ff] transition-colors">
+                                <div class="w-8 h-8 bg-[#00f7ff] rounded-full flex items-center justify-center mr-3">
+                                    <i class="fab fa-x-twitter text-gray-900"></i>
+                                </div>
+                                <span class="text-[#00f7ff]">X</span>
+                                <span class="ml-auto text-gray-400">@benjgadd</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <!-- Noise overlay -->
+    <div id="noise-overlay" class="z-[101] fixed inset-0 bg-no-repeat bg-cover opacity-10 pointer-events-none" style="background-image: url('images/noise.svg');"></div>
+    <!-- Gradient background -->
+    <div class="fixed inset-0 top-[60px] bg-gradient-to-b from-gray-900 to-[#243355] z-0"></div>
+    <!-- Fixed bar -->
+    <div class="fixed top-0 left-0 right-0 h-[60px] bg-gray-900 -z-10"></div>
+    <div class="pb-16"><!-- Bottom spacing --></div>
+</body>
+</html>
