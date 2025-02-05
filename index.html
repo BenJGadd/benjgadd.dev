@@ -13,13 +13,18 @@
         * {
             font-family: 'Open Sans', sans-serif;
         }
+        :root {
+            background-attachment: fixed;
+        }
     </style>
 </head>
 
 <body class="
     min-h-screen flex flex-col 
     text-gray-100 font-[Open_Sans] 
-
+    
+    bg-cover
+    bg-[length:100%_100dvh]
 
     [&::before]:content-['']
     [&::before]:fixed 
@@ -29,7 +34,6 @@
     [&::before]:via-gray-900 
     [&::before]:via-[60px]
     [&::before]:to-[#243355]
-    [&::before]:-z-10
 
     [&::after]:content-['']
     [&::after]:fixed
