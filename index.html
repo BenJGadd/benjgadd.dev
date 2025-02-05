@@ -19,17 +19,24 @@
 <body class="
     min-h-screen flex flex-col 
     text-gray-100 font-[Open_Sans] 
-    
-    bg-cover bg-fixed
-    bg-gradient-to-b from-gray-900 via-gray-900 via-[60px] to-[#243355] 
-    bg-[length:100%_100dvh]
-    
+
+
     [&::before]:content-['']
-    [&::before]:fixed
-    [&::before]:inset-0 
-    [&::before]:bg-[url('images/noise.svg')]
-    [&::before]:bg-[length:100%_100dvh]
-    [&::before]:opacity-10">
+    [&::before]:fixed 
+    [&::before]:inset-0
+    [&::before]:bg-gradient-to-b
+    [&::before]:from-gray-900
+    [&::before]:via-gray-900 
+    [&::before]:via-[60px]
+    [&::before]:to-[#243355]
+    [&::before]:-z-10
+
+    [&::after]:content-['']
+    [&::after]:fixed
+    [&::after]:inset-0 
+    [&::after]:bg-[url('images/noise.svg')]
+    [&::after]:bg-[length:100%_100dvh]
+    [&::after]:opacity-10">
 
     <nav class="w-full z-[100] min-h-[60px] px-4 flex items-center bg-gray-900 fixed 
     
