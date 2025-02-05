@@ -16,15 +16,39 @@
     </style>
 </head>
 
-<body class="min-h-screen flex flex-col text-gray-100 font-[Open_Sans] bg-gradient-to-b from-gray-900 via-gray-900 via-[60px] to-[#243355] bg-blend-overlay">
-    <nav class="fixed md:static w-full top-0 z-[100] min-h-[60px] px-4 flex items-center bg-gray-900 md:bg-transparent">
+<body class="
+    min-h-screen flex flex-col 
+    text-gray-100 font-[Open_Sans] 
+    
+    bg-cover bg-fixed
+    bg-gradient-to-b from-gray-900 via-gray-900 via-[60px] to-[#243355] 
+    
+    [&::before]:content-['']
+    [&::before]:fixed
+    [&::before]:inset-0 
+    [&::before]:bg-[url('images/noise.svg')]
+    [&::before]:opacity-10">
+
+    <nav class="w-full z-[100] min-h-[60px] px-4 flex items-center bg-gray-900 fixed 
+    
+    md:bg-transparent md:static
+    
+    [&::before]:content-['']
+    [&::before]:absolute
+    [&::before]:inset-0 
+    [&::before]:bg-[url('images/noise.svg')]
+    [&::before]:opacity-10
+    md:[&::before]:hidden">
+    
         <input type="checkbox" id="nav-toggle" class="hidden peer">
         
-        <label for="nav-toggle" class="fixed inset-0 bg-black/70 hidden peer-checked:block z-10 top-[60px] md:bg-transparent"></label>
+      
         
         <label for="nav-toggle" class="md:hidden absolute left-4 top-1/2 -translate-y-1/2 z-20 cursor-pointer text-gray-400">
             <i class="fas fa-bars fa-fw text-xl"></i>
         </label>
+        <!-- Mobile Menu Overlay - Closes menu when tapped -->
+        <label for="nav-toggle" class="fixed inset-0 bg-black/70 hidden peer-checked:block z-10 top-[60px]"></label>
     
         <div class="md:order-first md:static absolute right-4">
             <img src="images/icon.svg" alt="Profile Icon" class="[filter:invert(100%)]" width="40" height="40">
@@ -34,7 +58,13 @@
             <a href="/" class="font-medium hover:text-white">BenJGadd</a>
         </div>
     
-        <div class="links ml-auto gap-8 hidden md:flex peer-checked:flex fixed md:static inset-x-0 top-[60px] bg-gray-900 md:bg-transparent border-gray-800 p-4 md:p-0 flex-col md:flex-row z-20">
+        <div class="links ml-auto gap-8 hidden md:flex peer-checked:flex fixed md:static inset-x-0 top-[60px] bg-gray-900 md:bg-transparent border-gray-800 p-4 md:p-0 flex-col md:flex-row z-20
+        [&::before]:content-['']
+        [&::before]:absolute
+        [&::before]:inset-0 
+        [&::before]:bg-[url('images/noise.svg')]
+        [&::before]:opacity-10
+        md:[&::before]:hidden">
             <a href="/" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2 pl-4 md:pl-0">
                 <i class="fas fa-home fa-fw w-4"></i>Home
             </a>
@@ -53,15 +83,16 @@
         </div>
     </nav>
     
-    <main class="mt-[60px] mx-auto px-4 space-y-8 w-11/12 max-w-7xl flex-grow z-[99]">
-        <section class="grid lg:grid-cols-2 gap-8">
+    <main class="mt-[60px] px-4 space-y-8 w-full flex-grow z-[99]
+    md:mx-auto md:w-11/12 md:max-w-7xl">
+        <section class="grid gap-8 md:grid-cols-2">
             <div class="flex justify-center mt-8 md:mt-0">
                 <div class="w-64 h-64 rounded-full overflow-hidden border-4 border-[#00f7ff] shadow-lg shadow-[#00f7ff]/20">
                     <img src="images/profile.jpg" alt="Profile" class="w-full h-full object-cover">
                 </div>
             </div>
 
-            <div class="lg:text-left text-center">
+            <div class="md:text-left text-center">
                 <h1 class="text-4xl sm:text-5xl font-bold mb-2">Ben Gadd</h1>
                 
                 <article>
@@ -78,7 +109,7 @@
             </div>
         </section>
 
-        <section class="grid lg:grid-cols-2 gap-8">
+        <section class="grid gap-8 md:grid-cols-2">
             <div class="space-y-8">
                 <article>
                     <div class="flex justify-between items-center mb-4">
@@ -88,21 +119,21 @@
                         </button>
                     </div>
                     <div class="space-y-4">
-                        <div class="bg-gray-800 rounded flex flex-col sm:flex-row min-h-[160px] shadow-lg shadow-gray-900/50">
-                            <div class="w-full sm:w-1/2 h-[300px] sm:h-full p-4 order-1 sm:order-2 flex items-center justify-center">
-                                <img src="images/project1.jpg" alt="Project Image" class="w-full h-full sm:h-40 object-contain rounded">
+                        <div class="bg-gray-800 rounded flex flex-col md:flex-row-reverse min-h-[160px] shadow-lg shadow-gray-900/50 p-4">
+                            <div class="w-full md:w-1/2 flex items-start">
+                                <img src="images/project1.jpg" alt="Project Image" class="w-full h-full object-cover rounded-t md:rounded-none md:rounded-r">
                             </div>
-                            <div class="flex-grow p-4 sm:w-1/2 order-2 sm:order-1 text-left">
+                            <div class="flex-grow p-4 text-left">
                                 <h4 class="text-white mb-2">Project 1</h4>
                                 <p class="text-gray-400">Project 1 description goes here.</p>
                             </div>
                         </div>
                         
-                        <div class="bg-gray-800 rounded flex flex-col sm:flex-row min-h-[160px] shadow-lg shadow-gray-900/50">
-                            <div class="w-full sm:w-1/2 h-[300px] sm:h-full p-4 order-1 sm:order-2 flex items-center justify-center">
-                                <img src="images/project2.jpg" alt="Project 2 Image" class="w-full h-full sm:h-40 object-contain rounded">
+                        <div class="bg-gray-800 rounded flex flex-col md:flex-row-reverse min-h-[160px] shadow-lg shadow-gray-900/50 p-4">
+                            <div class="w-full md:w-1/2 flex items-start">
+                                <img src="images/project2.jpg" alt="Project 2 Image" class="w-full h-full object-cover rounded-t md:rounded-none md:rounded-r">
                             </div>
-                            <div class="flex-grow p-4 sm:w-1/2 order-2 sm:order-1 text-left">
+                            <div class="flex-grow p-4 text-left">
                                 <h4 class="text-white mb-2">Project 2</h4>
                                 <p class="text-gray-400">Project 2 description goes here.</p>
                             </div>
@@ -180,8 +211,6 @@
             </div>
         </section>
     </main>
-    <!-- Noise overlay -->
-    <div id="noise-overlay" class="z-[101] fixed inset-0 bg-no-repeat bg-cover opacity-10 pointer-events-none" style="background-image: url('images/noise.svg');"></div>
     <div class="pb-16"></div>
 </body>
 </html>
